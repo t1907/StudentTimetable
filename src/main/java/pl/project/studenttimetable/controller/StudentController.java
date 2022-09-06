@@ -39,8 +39,8 @@ public class StudentController {
         Student student1 = service.getStudentById(id);
         student1.setName(student.getName());
         student1.setSurname(student.getSurname());
-        service.updateStudent(student);
-        return ResponseEntity.ok(student);
+        service.updateStudent(student1);
+        return ResponseEntity.ok(student1);
     }
     @DeleteMapping(value = "/delete/{id}")
     public ResponseEntity<Student> deleteStudent(@PathVariable Long id){
