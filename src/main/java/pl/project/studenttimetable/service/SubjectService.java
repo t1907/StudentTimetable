@@ -5,9 +5,9 @@ import pl.project.studenttimetable.model.Subject;
 import java.util.List;
 
 public interface SubjectService {
-    public Subject addSubject(Subject subject);
-    public Subject updateSubject(Subject subject);
-    public void deleteSubject(Subject subject);
-    public Subject getSubjectById(Long id);
+    public Subject add(Subject subject);
+    public Subject update(Subject subject);
+    public void delete(Subject subject);
+    public Subject getById(Long id);
     public List<Subject> getAll();
 }

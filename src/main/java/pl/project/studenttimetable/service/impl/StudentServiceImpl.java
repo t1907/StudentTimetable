@@ -15,12 +15,12 @@ public class StudentServiceImpl implements StudentService {
     private StudentRepository studentRepository;
 
     @Override
-    public Student addStudent(Student student) {
+    public Student add(Student student) {
         return studentRepository.save(student);
     }
 
     @Override
-    public Student updateStudent(Student student) {
+    public Student update(Student student) {
         Student studentFromDB = studentRepository
                 .findById(student.getId())
                 .orElseThrow();
@@ -30,7 +30,7 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public void deleteStudent(Student student) {
+    public void delete(Student student) {
         Student studentFromDB = studentRepository
                 .findById(student.getId())
                 .orElseThrow();
@@ -38,7 +38,7 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public Student getStudentById(Long id) {
+    public Student getById(Long id) {
         return studentRepository
                 .findById(id)
                 .orElseThrow();
